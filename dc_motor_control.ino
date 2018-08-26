@@ -19,19 +19,10 @@ void setup()
   }
 
 void loop()
+
 {
-
-     ////////////////////////////////function to calculate potentiometer value////////////////////////////////////////////////////
-    int potentiometerValue()
-       {
-        int val = analogRead(potentiometerPin);
-        return val;
-       }    
-
-       int potValue = potentiometerValue();
-      int speed_val = map(potValue, 0, 1023, 0, 255);   // sets the value (range from 0 to 255):
-      
-      /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        int potValue = potentiometerValue();
+        int speed_val = map(potValue, 0, 1023, 0, 255);   // sets the value (range from 0 to 255):
 
 
       
@@ -76,6 +67,17 @@ void loop()
            delay(1000) ;
       }
 
-     
+    
 
-}   
+}
+
+     ////////////////////////////////function to calculate potentiometer value////////////////////////////////////////////////////
+      int potentiometerValue()
+       {
+        int val = analogRead(potentiometerPin);
+        return val;
+       }    
+
+       
+      
+      /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
